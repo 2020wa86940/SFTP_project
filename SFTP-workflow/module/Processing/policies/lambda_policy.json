@@ -1,0 +1,50 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "textract:StartDocumentAnalysis",
+          "textract:GetDocumentAnalysis",
+          "textract:StartDocumentTextDetection",
+          "textract:GetDocumentTextDetection"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:ListBucket"
+        ],
+        "Resource": [
+          "${aws_s3_bucket.textract_output.arn}",
+          "${aws_s3_bucket.textract_output.arn}/*"
+        ]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "sns:Publish"
+        ],
+        "Resource": [
+          "${aws_sns_topic.textract_completion.arn}"
+        ]
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "sqs:SendMessage",
+          "sqs:ReceiveMessage",
+          "sqs:DeleteMessage",
+          "sqs:GetQueueAttributes"
+        ],
+        "Resource": [
+          "${aws_sqs_queue.textract_jobs.arn}",
+          "${aws_sqs_queue.textract_dlq.arn}"
+        ]
+      }
+    ]
+  }
+  

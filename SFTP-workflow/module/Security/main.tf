@@ -1,4 +1,4 @@
-# security.tf
+
 
 # KMS Key for Encryption
 resource "aws_kms_key" "application_key" {
@@ -219,15 +219,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "pdf_landing" {
   }
 }
 
-# DynamoDB Encryption
-resource "aws_dynamodb_table" "participant_data" {
-  # ... other configurations ...
 
-  server_side_encryption {
-    enabled     = true
-    kms_key_arn = aws_kms_key.application_key.arn
-  }
-}
 
 # WAF Web ACL
 resource "aws_wafv2_web_acl" "main" {

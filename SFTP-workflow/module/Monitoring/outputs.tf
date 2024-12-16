@@ -1,4 +1,4 @@
-# outputs.tf
+
 
 output "critical_alerts_topic_arn" {
   description = "ARN of the critical alerts SNS topic"

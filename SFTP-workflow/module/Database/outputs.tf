@@ -1,4 +1,4 @@
-# outputs.tf
+
 
 output "participant_data_table_arn" {
   description = "ARN of the participant data table"

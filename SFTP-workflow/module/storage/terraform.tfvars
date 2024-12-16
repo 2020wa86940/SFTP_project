@@ -1,4 +1,4 @@
-# terraform.tfvars
+
 
 environment            = "prod"
 pdf_landing_bucket    = "XXXXXXXXXXXXXXX"

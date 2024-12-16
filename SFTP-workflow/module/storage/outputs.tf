@@ -1,4 +1,4 @@
-# outputs.tf
+
 
 output "pdf_landing_bucket" {
   description = "PDF landing bucket name"

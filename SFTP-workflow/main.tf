@@ -1,4 +1,4 @@
-# main.tf - Main configuration file
+#  Main configuration file
 
 provider "aws" {
   region = var.aws_region

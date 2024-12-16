@@ -1,4 +1,4 @@
-# monitoring.tf
+
 
 # CloudWatch Log Groups
 resource "aws_cloudwatch_log_group" "application_logs" {

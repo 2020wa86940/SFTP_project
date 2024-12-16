@@ -1,4 +1,4 @@
-# variables.tf
+
 
 variable "aws_region" {
   description = "Primary AWS region"
@@ -21,7 +21,7 @@ variable "common_tags" {
   description = "Common tags for all resources"
   type        = map(string)
   default = {
-    Environment = "production"
+    Environment = "test"
     Project     = "data-processing"
     Managed_by  = "terraform"
   }

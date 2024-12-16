@@ -1,4 +1,4 @@
-# outputs.tf
+
 
 output "sftp_server_endpoint" {
   description = "SFTP server endpoint"

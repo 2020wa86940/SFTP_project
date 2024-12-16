@@ -1,4 +1,4 @@
-# outputs.tf
+
 
 output "textract_output_bucket" {
   description = "Name of the Textract output bucket"

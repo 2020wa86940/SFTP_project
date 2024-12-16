@@ -1,8 +1,8 @@
-# terraform.tfvars
 
-sftp_bucket_name  = "XXXXXXXXXXXXXX"
+
+sftp_bucket_name  = "samplebucket12345"
 sftp_server_name  = "my-sftp-server"
-environment       = "production"
+environment       = "test"
 log_retention_days = 30
 alert_email       = "admin@example.com"
 
